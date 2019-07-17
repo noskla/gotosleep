@@ -14,6 +14,8 @@
 
 #ifdef __linux__
 const bool is_root = !!getuid();
+#else
+const bool is_root = false;
 #endif
 const char* win_letter = std::getenv("SystemDrive");
 std::string command;
