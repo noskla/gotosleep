@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
   if ((argument == "-h") || (argument == "--help")) {
     std::cout << "-h, --help      Displays this message." << std::endl;
     std::cout << "-c, --hour      Shutdown on given hour (24-hour clock)." << std::endl;
-    std::cout << "-t, --timer     Shutdown after given time." << std::endl;
+    std::cout << "-t, --time      Shutdown after given time." << std::endl;
     std::cout << "-r, --random    Shutdown at random time between 10 minutes to 5 hours." << std::endl;
     std::cout << "-v, --version   Show version information." << std::endl;
     std::cout << "Use \"start /B gotosleep <args>\" on Windows or \"sudo gotosleep <args> &\" on Linux to run program in the background." << std::endl;
@@ -240,7 +240,7 @@ int main(int argc, char *argv[]) {
   } else if (os == "linux") {
   
     // linux
-    command = "/bin/shutdwn -P now";
+    command = "/bin/shutdown -P now";
   
   }
 
