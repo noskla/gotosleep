@@ -1,0 +1,10 @@
+
+Compiling:
+
+Linux: "gcc main.cpp -lstdc++ -o gotosleep.o"
+Windows: Use Mingw64 and "gcc main.cpp -lstdc++ -o gotosleep.exe"
+
+Usage:
+
+gotosleep --help
+

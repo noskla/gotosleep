@@ -12,11 +12,6 @@
 
 #include "conf.h"
 
-#ifdef __linux__
-const bool is_root = !!getuid();
-#else
-const bool is_root = false;
-#endif
 const char* win_letter = std::getenv("SystemDrive");
 std::string command;
 
@@ -58,12 +53,6 @@ int main(int argc, char *argv[]) {
   if (os == "unknown") {
     std::cout << "[warning] Unknown operating system, attempting to run as Linux anyway." << std::endl;
     os == "linux";
-  }
-
-  // check root
-  if (os == "linux") {
-    if (!is_root)
-      std::cout << "Running without root privileges, on some distributions /bin/shutdown may deny access. Trying anyway, you've been warned." << std::endl;
   }
 
   // arguments
